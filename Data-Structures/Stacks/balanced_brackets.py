@@ -9,26 +9,26 @@ brackets to closing brackets. This can also match pairs of brackets which
 are siblings as well.
 '''
 
-n = int(input()) # type: int
+n = int(input())  # type: int
 for _ in range(n):
-    s = input() # type: str
-    stack = [] # type: List[str]
-    # s_i: type str
+    s = input()  # type: str
+    stack = []  # type: List[str]
+    # s_i type: str
     for s_i in s:
         if s_i == '(' or s_i == '[' or s_i == '{':
-            stack.append(s_i)                       # push all opening brackets onto the stack
-        elif not stack:                             # check for strings that begin with closing
-            stack.append(None)                      # push nil so that stack isn't empty
+            stack.append(s_i)  # push all opening brackets onto the stack
+        elif not stack:  # check for strings that begin with closing
+            stack.append(None)  # push nil so that stack isn't empty
             break
         elif stack[-1] == '(' and s_i == ')':
-            stack.pop()                             # only pop if they match
+            stack.pop()  # only pop if they match
         elif stack[-1] == '[' and s_i == ']':
-            stack.pop()                             # only pop if they match
+            stack.pop()  # only pop if they match
         elif stack[-1] == '{' and s_i == '}':
-            stack.pop()                             # only pop if they match
+            stack.pop()  # only pop if they match
         else:
-            break                                   # no solution if they don't match
+            break  # no solution if they don't match
     if not stack:
-        print("YES")                                # all brackets matched so stack is empty
+        print("YES")  # all brackets matched so stack is empty
     else:
-        print("NO")                                 # some bracket wasn't matched
+        print("NO")  # some bracket wasn't matched
