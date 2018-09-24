@@ -12,13 +12,13 @@ show that each stack begins with 0 height.
 s_1, s_2, s_3 = [0], [0], [0]  # type: List[int], List[int], List[int]
 n_1, n_2, n_3 = map(int, input().split())  # type: int, type: int, type: int
 
-# i type: int
+# i: int
 for i in map(int, input().split()[::-1]):
     s_1.append(s_1[-1] + i)
-# j type: int
+# j: int
 for j in map(int, input().split()[::-1]):
     s_2.append(s_2[-1] + j)
-# k type: int
+# k: int
 for k in map(int, input().split()[::-1]):
     s_3.append(s_3[-1] + k)
 

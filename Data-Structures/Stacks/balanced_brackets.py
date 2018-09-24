@@ -13,7 +13,7 @@ n = int(input())  # type: int
 for _ in range(n):
     s = input()  # type: str
     stack = []  # type: List[str]
-    # s_i type: str
+    # s_i: str
     for s_i in s:
         if s_i == '(' or s_i == '[' or s_i == '{':
             stack.append(s_i)  # push all opening brackets onto the stack
